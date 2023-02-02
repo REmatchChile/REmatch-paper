@@ -1,0 +1,15 @@
+{
+  "name": "rematch",
+  "version": "1.0.0",
+  "dependencies" : [
+    "cli11",
+    "oniguruma",
+    "tre",
+    "re2",
+    "pcre",
+    "pcre2",
+    "boost-regex",
+    "boost-spirit",
+    "boost-bimap"
+  ]
+}
