@@ -47,13 +47,36 @@ cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=./vcpkg/sc
 cmake --build build
 ```
 
-These commands may take some time to finish as they download and install dependencies, and build the library and the binaries to make experiments. 
+These commands may take some time to finish as they download and install dependencies. They also build the library and the necesary binaries to make experiments. 
 
 ## **Usage**
 ### **CLI Tool**
 The project provides the rematch CLI tool to run experiments. The tool is located in the `build/bin` directory. To run the tool, run the following command:
 ```
 build/bin/rematch <input_file> <regex-file>
+```
+
+#### **Examples**
+
+Get all spans corresponding to a single letter `a`:
+```
+build/bin/rematch document.txt -e '!x{a}'
+```
+Same as above but giving the text explicitly from args:
+```
+build/bin/rematch -t "aaa" -e '!x{a}'
+```
+Get all spans corresponding to a pattern in a file:
+```
+build/bin/rematch document.txt regex.txt
+```
+Get benchmark stats (execution time, number of outputs, memory usage, etc.):
+```
+build/bin/rematch document.txt regex.txt --mode=benchmark
+```
+To see learn about the options of the CLI tool, run the following command:
+```
+build/bin/rematch --help
 ```
 
 ### **Experiments**
