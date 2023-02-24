@@ -15,30 +15,17 @@ This repository functions as a companion piece for the paper _REmatch: a novel r
 
 
 ## **Setup**
-
-### **Dependencies**
+### **Configuring**
 
 REmatch is a C++ library. We recommend using LLVM's `clang` or GNU's `g++`. 
-
-REmatch depends on CMake for configuring and building. To install CMake in Ubuntu, run the following command:
-```bash
-sudo apt-get install cmake
-```
-To install it in MacOS,
-```bash
-brew install cmake
-```
-
-To install it in Windows, you can download the installer from [https://cmake.org/install/](https://cmake.org/install/)
-
-
-### **Building**
 
 REmatch uses [vcpkg](https://vcpkg.io/en/index.html) to manage its dependencies. This repository already comes with the vcpkg repository as a submodule. To install it, run the following commands:
 ```
 git submodule update --init --recursive
 ./vcpkg/bootstrap-vcpkg.sh
 ```
+
+### **Building**
 
 To build the library, run the following commands:
 ```
