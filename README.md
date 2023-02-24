@@ -43,12 +43,21 @@ git submodule update --init --recursive
 To build the library, run the following commands:
 ```
 mkdir build
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
 cmake --build build
 ```
 
-This will install REmatch dependencies and build the library. The library will be located in the `build/bin` directory.
+These commands may take some time to finish as they download and install dependencies, and build the library and the binaries to make experiments. 
 
 ## **Usage**
-To reproduce the results in the paper, you'll need to have python installed. Run the following commands:
+### **CLI Tool**
+The project provides the rematch CLI tool to run experiments. The tool is located in the `build/bin` directory. To run the tool, run the following command:
+```
+build/bin/rematch <input_file> <regex-file>
+```
+
+### **Experiments**
+The project provides a set of experiments to evaluate the performance of the library. The experiments are located in the `datasets` directory. To run the experiments, run the following commands:
+```
+python scripts/benchmark.py
 ```
