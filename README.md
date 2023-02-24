@@ -11,7 +11,7 @@ This repository functions as a companion piece for the paper _REmatch: a novel r
 [https://github.com/REmatchChile/REmatch-paper/edit/main/README.md](https://github.com/REmatchChile/REmatch-paper/edit/main/README.md)
 
 - **Link to the extended verison of the paper**: 
-[https://github.com/REmatchChile/REmatch-paper/blob/main/paper.pdf](https://github.com/REmatchChile/REmatch-paper/blob/main/paper.pdf)
+[https://github.com/REmatchChile/REmatch-paper/blob/main/paper.pdf](https://github.com/REmatchChile/REmatch-paper/blob/main/documents/paper.pdf)
 
 
 ## **Setup**
