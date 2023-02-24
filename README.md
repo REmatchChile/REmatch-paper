@@ -2,7 +2,7 @@
 
 
 This repository functions as a companion piece for the paper _REmatch: a novel regex engine for finding all matches_. The repository contains:
-1. A snapshot of the source code repository for the paper.
+1. A snapshot of the source code repository of the REmatch library.
 2. The extended version of the paper.
 
 ## **Important Links**
