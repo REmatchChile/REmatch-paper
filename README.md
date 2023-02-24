@@ -17,7 +17,7 @@ This repository functions as a companion piece for the paper _REmatch: a novel r
 ## **Setup**
 ### **Configuring**
 
-REmatch is a C++ library. We recommend using LLVM's `clang` or GNU's `g++` as a compiler. 
+REmatch is a C++ library. We recommend using LLVM's `clang` or GNU's `g++` for compiling. 
 
 REmatch uses [CMake](https://cmake.org/) for configuration and [vcpkg](https://vcpkg.io/en/index.html) to manage its dependencies. This repository already comes with the vcpkg repository as a submodule. To install it, run the following commands:
 ```
@@ -25,7 +25,7 @@ git submodule update --init --recursive
 ./vcpkg/bootstrap-vcpkg.sh
 ```
 
-A cmake portable will be provided by the vcpkg installation if CMake is not installed. To setup the project configuration run:
+A `cmake` portable will be provided by the vcpkg installation if CMake is not installed. To setup the project configuration run:
 ```
 mkdir build
 cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
@@ -49,9 +49,9 @@ build/bin/rematch <input_file> <regex-file>
 
 #### **Examples**
 
-Get all spans corresponding to a single letter `a`:
+Get all spans corresponding to a single letter `a` in a file:
 ```
-build/bin/rematch document.txt -e '!x{a}'
+build/bin/rematch <document_file> -e '!x{a}'
 ```
 Same as above but giving the text explicitly from args:
 ```
@@ -59,11 +59,11 @@ build/bin/rematch -t "aaa" -e '!x{a}'
 ```
 Get all spans corresponding to a pattern in a file:
 ```
-build/bin/rematch document.txt regex.txt
+build/bin/rematch <document_file> <regex_file>
 ```
 Get benchmark stats (execution time, number of outputs, memory usage, etc.):
 ```
-build/bin/rematch document.txt regex.txt --mode=benchmark
+build/bin/rematch <document_file> <regex_file> --mode=benchmark
 ```
 To see learn about the options of the CLI tool, run the following command:
 ```
